@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="CSS/style.css" />
 
         <!-- Custom CSS link for form container -->
-        <link rel="stylesheet" href="CSS/login.css" />
+        <link rel="stylesheet" href="CSS/login-signup.css" />
 
         <title>Login | UHA Marketing Business</title>
     </head>
@@ -25,8 +25,8 @@
         <div class="login-container">
             <div class="login-left">
                 <div class="login-info">
-                    <div class="login-title">Welcome to UHA</div>
-                    <div class="login-desc">
+                    <h2>Welcome to UHA</h2>
+                    <p>
                         With our powerful tools and experienced team, we are
                         here to help you grow your business and reach your
                         target audience. We can't wait to see the success you'll
@@ -34,24 +34,21 @@
                         experienced team, we are here to help you grow your
                         business and reach your target audience. We can't wait
                         to see the success you'll achieve with our platform.
-                    </div>
+                    </pclass=>
                 </div>
             </div>
-            <div class="login-right">
+            <div class="login-right"> 
                 <div class="logo">
                     <img src="assets/images/logo.jpg" alt="UHA logo" />
                 </div>
                 <div class="mobile-title">Welcome to UHA</div>
                 <!-- error and success messages shown as the user try to sign up -->
-                <div class="message error">
+                <div class="message d-none  " id="message">
                     <i class="fa-regular fa-info-circle"></i>
-                    <span>Invalid Email or Password</span>
-                </div>
-                <div class="message success">
                     <i class="fa-regular fa-check-circle"></i>
-                    <span>Email and Password Verified</span>
-                </div>
-                <form action="#" class="login-form">
+                    <span>Invalid Email or Password</span>
+                </div> 
+                <form  class="login-form" id="login-form">
                     <div class="input-group">
                         <label for="email"> Email <span>*</span></label>
                         <input
@@ -68,20 +65,20 @@
                             id="password"
                             required
                             placeholder="Enter your password"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters. (Please do not use Special Characters)"
-                        />
-                        <i
+                            />
+                            <!-- title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters. (Please do not use Special Characters)" -->
+                            <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+                        <i 
                             class="fa-regular fa-eye-slash"
                             title="Show Password"
-                        ></i>
+                        ></i>   
                     </div>
-                    <a href="#" class="forgot-password">Forgot password?</a>
+                    <a href="recover-password.html" class="forgot-password">Forgot password?</a>
 
                     <button type="submit" class="btn-primary">
                         <span>Login</span>
                         <!-- Add d-none class in the below element to hide it, shown for demo -->
-                        <div class="dot-animation">
+                        <div class="dot-animation  ">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -89,10 +86,11 @@
                     </button>
                 </form>
                 <div class="new-user">
-                    Don't have any account. <a href="#">Sign Up</a>
+                    Don't have any account. <a href="signup.html">Sign Up</a>
                 </div>
             </div>
         </div>
     </body>
-    <script src="JavaScript/show-hide-password.js"></script>
 </html>
+<script src="JavaScript/show-hide-password.js"></script>
+<script src="JavaScript/login.js"></script>
